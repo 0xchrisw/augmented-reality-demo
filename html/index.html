@@ -1,0 +1,71 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Augmented Reality Demo</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+  </head>
+  <body>
+
+    <div class="main">
+
+      <div class="header">
+        <h3 class="title">Augmented Reality Demo</h3>
+        <h4 class="subtitle">
+          SuperMicro Super Server
+        </h4>
+        <div class="captions">
+          <h4 class="author">
+            Christopher Woodall
+          </h4>
+          <h4 class="links">
+            <a href="https://github.com/christopherwoodall/">github</a> /
+            <a href="https://www.linkedin.com/in/christopher-woodall/">linkedin</a>
+          </h4>
+        </div>
+        <div class="controls">
+          <button class="button" id="ctrl-model">📐 Model View</button>
+          <button class="button" id="ctrl-marker">📷 Marker View</button>
+        </div>
+      </div>
+
+
+      <div id="content">
+        <div id="model-viewer" class="viewer hidden">
+          <model-viewer
+            alt="SuperMicro Super Server"
+            src="assets/models/node.gltf"
+            ar ar-modes="webxr scene-viewer quick-look"
+            environment-image="neutral"
+            poster="assets/models/node-poster.webp" seamless-poster
+            shadow-intensity="1"
+            camera-controls enable-pan>
+          </model-viewer>
+        </div>
+
+        <p class="help">
+          Use the controls above to select either <code>📐 Model View</code> or <code>📷 Marker View</code>
+        </p>
+        <p class="help text-left">
+            <code>📐 Model View</code> - Renders the model on the webpage and allows you to move it around.
+        </p>
+        <p class="help text-left">
+          <code>📷 Marker View</code> - Uses your webcam and a marker to overlay a 3D model on your screen.
+        </p>
+      </div>
+
+  </div>
+
+    <script type="module"
+            src="assets/js/vendor/model-viewer.min.js">
+    </script>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
